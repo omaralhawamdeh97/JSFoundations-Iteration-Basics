@@ -42,8 +42,15 @@ console.log(getEvens([1, 2, 3, 4, 5, 6, 7, 8, 9]));
  * countOccurences(1, [1, 2, 3, 1, 4, 5, 6, 1, 7, 8, 9, 10, 11, 1, 12, 13]) -> 4
  * countOccurences(52, [11, 35, 52, 14, 56, 601, 52, 777, 888, 999, 52]) -> 3
  */
-function countOccurences(x, numbers) {}
-
+function countOccurences(x, numbers) {
+  const filtered = numbers.filter(function (number) {
+    return x === number;
+  });
+  return filtered.length;
+}
+console.log(
+  countOccurences(1, [1, 2, 3, 1, 4, 5, 6, 1, 7, 8, 9, 10, 11, 1, 12, 13])
+);
 /**
  * makeThemDoctors(students):
  * - receives array `students`
